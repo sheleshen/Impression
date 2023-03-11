@@ -14,7 +14,7 @@
     }
 
 :root {
-    --main-beige: #E2D7C3;
+    --main-beige: rgb(226, 215, 195);
     --main-blue: #B3BACF;
     --main-dark: #5B5659;
     --main-light: #F6F0EC;
@@ -27,6 +27,7 @@
     --text: #FFFFFF;
     --text-menu: #DDE7F0;
     --indent-header: 20px;
+    --indent-colomns: 24px;
 }
 
 
@@ -51,17 +52,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+    font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     line-height: 1.4;
     color: var(--text);
 }
 
 ul, li {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
     line-height: 1.4;
     color: var(--text);
@@ -78,6 +80,7 @@ h1 {
 h2 {
     font-size: 100px;
     line-height: 120%;
+    padding-bottom: 21px;
 }
 
 .btn {
@@ -132,8 +135,16 @@ h2 {
     padding-bottom: 40px;
 }
 
+
 .text-quote {
-    /* font-size: 200px; */
+    font-family: 'Le Murmure', sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 120%;
+    /* text-align: center; */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--main-beige);
 }
 
 
@@ -142,7 +153,9 @@ h2 {
     display: block;
 }
 
-.chronology-date {
+
+.title-date {
+    font-family: 'Le Murmure';
     font-style: normal;
     font-weight: 600;
     font-size: 200px;
@@ -150,14 +163,7 @@ h2 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     opacity: 0.1;
-}
-
-
-.description-picture {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.2;
-    text-align: right;
+    padding-bottom: 48px;
 }
 
 .date-facts {
@@ -171,6 +177,94 @@ h2 {
     color: var(--main-beige)
 }
 
+.historical-date {
+    display: flex;
+    gap: var(--indent-colomns);
+    padding-bottom: 64px;
+}
+
+.historical-date-title {
+    padding-bottom: 64px;
+}
+
+.description-text {
+    display: flex;
+    gap: var(--indent-colomns);   
+}
+
+.text-widht-two {
+    width: calc(100% - var(--indent-colomns)/2);
+    /* flex-grow: 1;
+    flex-wrap: wrap; */
+}
+
+.image-historical {
+    max-width: 100%;
+}
+
+.description-image {
+    text-align: right;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.text-widht-three {
+    width: calc(100% - (var(--indent-colomns)*2)/3);
+}
+
+.date-title {
+    display: flex;
+}
+
+
+/* Импрессонизм в цифрах */
+
+.title-fact {
+    text-align: center;
+}
+
+.container-fact-list {
+    max-width: 1044px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fact-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.fact-item {
+    display: flex;
+    border-bottom: 1px solid rgb(226, 215, 195, 0.2);
+    /* flex-wrap: wrap; */
+}
+
+.fact-subtitle {
+    font-family: 'Le Murmure';
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--main-beige);
+    width: calc(100% - (var(--indent-colomns)*1)/2);
+    /* flex-grow: 1; */
+}
+
+.fact-description {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    width: calc(100% - (var(--indent-colomns)*1)/2);
+    /* flex-grow: 1; */
+}
+
+
+/* footer */
+
 .description-footer {
     font-style: normal;
     font-weight: 600;
@@ -180,6 +274,9 @@ h2 {
     text-align: right;
     color: var(--text)
 }
+
+
+
 
 /* Хедер стили
 
