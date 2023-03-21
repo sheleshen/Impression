@@ -165,7 +165,7 @@ h2 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding-bottom: 40px;
-    width: calc(100%/1.5);
+    width: calc(100% / 1.5);
     margin: 0 auto
 }
 
