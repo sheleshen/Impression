@@ -28,6 +28,7 @@
     --text-menu: #DDE7F0;
     --indent-header: 20px;
     --indent-colomns: 24px;
+    --image-indent: 19px;
 }
 
 
@@ -196,6 +197,16 @@ h2 {
 
 /* Большой блок с датами */
 
+.date-size {
+    /* max-width: 30%; */
+    width: 384px;
+}
+
+.content-size {
+    /* max-width: 70%; */
+    width: 792px;
+}
+
 .title-date {
     font-family: 'Le Murmure';
     font-style: normal;
@@ -206,6 +217,10 @@ h2 {
     text-transform: uppercase;
     opacity: 0.1;
     padding-bottom: 48px;
+}
+
+.extra-indent {
+    padding-bottom: 68px;
 }
 
 .date-facts {
@@ -236,6 +251,9 @@ h2 {
 
 .text-widht-two {
     width: calc(100% - var(--indent-colomns)/2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--indent-colomns);
     /* flex-grow: 1;
     flex-wrap: wrap; */
 }
@@ -251,10 +269,15 @@ h2 {
     font-size: 16px;
     line-height: 1.2;
     text-align: right;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .text-widht-three {
     width: calc(100% - (var(--indent-colomns)*2)/3);
+    display: flex;
+    flex-direction: column;
 }
 
 .date-title {
@@ -264,8 +287,13 @@ h2 {
 
 /* Импрессонизм в цифрах */
 
+.container-indent {
+    padding-bottom: 80px;
+}
+
 .title-fact {
     text-align: center;
+    padding-bottom: 40px;
 }
 
 .container-fact-list {
@@ -282,6 +310,7 @@ h2 {
 .fact-item {
     display: flex;
     border-bottom: 1px solid rgb(226, 215, 195, 0.2);
+    align-items: center;
     /* flex-wrap: wrap; */
 }
 
@@ -294,7 +323,8 @@ h2 {
     text-transform: uppercase;
     color: var(--main-beige);
     width: calc(100% - (var(--indent-colomns)*1)/2);
-    /* flex-grow: 1; */
+
+    padding: 16px 0;
 }
 
 .fact-description {
@@ -305,60 +335,52 @@ h2 {
     /* flex-grow: 1; */
 }
 
+/* galery */
 
-/* footer */
 
-.description-footer {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 120%;
+.section-gallery {
+    background-color: var(--main-blue);
+}
 
-    text-align: right;
-    color: var(--text)
+.title-galery {
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 40px;
 }
 
 
+.image-list {
+    display: flex;
+    gap: var(--indent-colomns);
+    padding-bottom: 64px;
+}
+
+.image-widht-three {
+    width: calc(100% - (var(--indent-colomns)*2)/3);
+    display: flex;
+    flex-direction: column;
+}
+
+.image-indent {
+    padding-bottom: var(--image-indent);
+}
 
 
-/* Хедер стили
+/* Footer */
 
+.section-footer {
+    background-color: var(--main-blue);
+}
 
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 25px;
+.footer-line {
+    border-top: 1px solid var(--main-light);
+}
 
-position: absolute;
-width: 1098px;
-height: 17px;
-left: 171px;
-top: 40px; */
-
-/* блок с картинкой
-position: absolute;
-width: 1300px;
-height: 905px;
-left: 70px;
-top: 64px; */
-
-
-/* кнопка в хиро
-border: 1px solid #FFFFFF;
-border-radius: 4px; */
-
-
-/* картинка 
-position: absolute;
-width: 1300px;
-height: 800px;
-left: 70px;
-top: 169px;
-background: linear-gradient(0deg, rgba(68, 65, 67, 0.25), rgba(68, 65, 67, 0.25)), url(image.png); */
-
-
-/* полоса в фактах
-background: #E2D7C3;
-opacity: 0.2;
-border: 1px solid #E2D7C3; */
+.footer-text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--text-menu);
+    text-align: center;
+    padding: 32px 0;
+}
