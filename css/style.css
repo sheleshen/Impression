@@ -41,6 +41,15 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.05em;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+a:hover {
+    color: var(--stroke-purple);
+}
+
 .accent-font {
     font-family: 'Le Murmure';
     font-style: normal;
@@ -89,6 +98,21 @@ h2 {
     border-radius: 4px;
     padding: 20px 32px;
     color: var(--text);
+
+    cursor: pointer;
+    transition: background-color 250ms linear;
+}
+
+.btn:active {
+    background-color: var(--main-blue);
+    color: var(--main-dark);
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--main-blue);
+    color: var(--main-dark);
+    border: none;
 }
 
 .container {
@@ -146,6 +170,7 @@ h2 {
     position: relative;
     padding-top: 170px; 
     padding-bottom: 80px;
+    text-align: center;
 }
 
 
@@ -189,17 +214,17 @@ h2 {
     color: var(--main-beige);
 }
 
-.btn-hero {
+/* .btn-hero {
     margin: 0 auto;
     display: block;
-}
+} */
 
 
 /* Большой блок с датами */
 
 .date-size {
-    /* max-width: 30%; */
     width: 384px;
+    /* width: 30%; */
 }
 
 .content-size {
