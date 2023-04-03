@@ -31,6 +31,15 @@
     --image-indent: 19px;
 }
 
+@media (max-width: 600px) {
+    :root {
+        --indent-header: 20px;
+        --indent-colomns: 16px;
+        --indent-container: 40px;
+        --image-indent: 19px;
+    }
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Le Murmure', sans-serif;
@@ -194,18 +203,26 @@ h2 {
 
 @media (max-width: 600px) {
     .container {
-        max-width: calc(100% - var(--indent-colomns));
+        max-width: calc(100% - var(--indent-container));
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    .container {
+        max-width: calc(100% - var(--indent-container));
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    .container {
+        max-width: calc(100% - var(--indent-container));
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -435,6 +452,24 @@ h2 {
     color: var(--main-beige);
 }
 
+@media (max-width: 600px) {
+    .text-quote {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+}
+
 /* .btn-hero {
     margin: 0 auto;
     display: block;
@@ -450,8 +485,7 @@ h2 {
 
 @media (max-width: 600px) {
     .date-size {
-        width: 0px
-        /* width: 30%; */
+        display: none;
     }
 }
 
@@ -475,6 +509,21 @@ h2 {
 @media (max-width: 600px) {
     .title-date {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-mobile-ver {
+        font-family: 'Le Murmure', sans-serif;
+        color:var(--text);
+        font-weight: 600;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+
+        font-size: 50px;
+        line-height: 120%;
+        padding-bottom: 21px;
     }
 }
 
@@ -502,7 +551,7 @@ h2 {
 @media (max-width: 600px) {
     .historical-date {
         gap: 0px;
-        padding-bottom: 64px;
+        padding-bottom: 50px;
     }
 }
 
@@ -536,15 +585,30 @@ h2 {
     flex-wrap: wrap; */
 }
 
+
+@media (max-width: 600px) {
+    .text-widht-two-reverse {
+        flex-direction: column-reverse;
+    }  
+} 
+
+
 @media (max-width: 600px) {
     .text-widht-two {
-        width: 100%
+        width: 100%;
     }
     
 }
 
 .image-historical {
     max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .image-historical {
+        width: 100%
+    }
+    
 }
 
 .description-image {
@@ -565,6 +629,24 @@ h2 {
     flex-direction: column;
 }
 
+@media (max-width: 600px) {
+    .text-widht-three {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+}
+
 .date-title {
     display: flex;
 }
@@ -578,7 +660,7 @@ h2 {
 
 @media (max-width: 600px) {
     .container-indent {
-        padding-bottom: 50px;
+        padding-bottom: 60px;
     }
 }
 
@@ -668,7 +750,7 @@ h2 {
 
 @media (max-width: 600px) {
     .title-galery {
-        padding-top: 40px;
+        padding-top: 50px;
         padding-bottom: 20px;
     }
 }
@@ -686,6 +768,7 @@ h2 {
         flex-direction: column;
         padding-bottom: 35px;
         overflow: hidden;
+        gap: 0px;
     }
 }
 
@@ -715,6 +798,16 @@ h2 {
 .image-gallery {
     object-fit: cover;
     object-position: center;
+}
+
+@media (max-width: 600px) {
+    .image-gallery {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
 }
 
 
