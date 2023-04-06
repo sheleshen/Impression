@@ -689,6 +689,12 @@ h2 {
     }
 }
 
+@media (min-width: 1024px) {
+    .title-mobile-ver {
+        display: none;
+    }
+}
+
 .extra-indent {
     padding-bottom: 68px;
 }
