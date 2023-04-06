@@ -33,13 +33,31 @@
 
 @media (max-width: 600px) {
     :root {
-        --indent-header: 20px;
         --indent-colomns: 16px;
         --indent-container: 40px;
-        --image-indent: 19px;
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    :root {
+        --indent-colomns: 16px;
+        --indent-container: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    :root {
+        --indent-colomns: 16px;
+        --indent-container: 40px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    :root {
+        --indent-colomns: 16px;
+        --indent-container: 40px;
+    }
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Le Murmure', sans-serif;
@@ -70,14 +88,22 @@ a:hover {
     text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
     .accent-font {
-        font-size: 36px;
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .accent-font {
+        font-size: 32px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    .accent-font {
+        font-size: 36px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -97,6 +123,18 @@ p {
     color: var(--text);
 }
 
+@media (max-width: 600px) {
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    p {
+        font-size: 15px;
+    }
+}
+
 ul, li {
     font-family: 'Oswald', 'Noto Sans', sans-serif;
     font-size: 15px;
@@ -113,22 +151,34 @@ h1 {
     text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
     h1 {
         font-size: 80px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    h1 {
+        font-size: 100px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    h1 {
+        font-size: 140px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-
+    h1 {
+        font-size: 160px;
+    }
 }
 
 h2 {
@@ -143,17 +193,22 @@ h2 {
     }
 }
 
-
 @media (min-width: 600px) and (max-width: 768px) {
-
+    h2 {
+        font-size: 60px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    h2 {
+        font-size: 70px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-
+    h2 {
+        font-size: 90px;
+    }
 }
 
 .btn {
@@ -162,25 +217,16 @@ h2 {
     border-radius: 4px;
     padding: 20px 32px;
     color: var(--text);
+    font-size: 16px;
 
     cursor: pointer;
     transition: background-color 250ms linear;
 }
 
 @media (max-width: 600px) {
-
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
+    .btn {
+        font-size: 15px;
+    }
 }
 
 .btn:active {
@@ -204,29 +250,25 @@ h2 {
 @media (max-width: 600px) {
     .container {
         max-width: calc(100% - var(--indent-container));
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .container {
         max-width: calc(100% - var(--indent-container));
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .container {
         max-width: calc(100% - var(--indent-container));
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-
+    .container {
+        max-width: calc(100% - var(--indent-container));
+    }
 }
 
 .section-color {
@@ -273,32 +315,55 @@ h2 {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-list {
+        display: none;
+    }
+}
+
 .nav-item {
     list-style: none;
 }
 
 /* Гамбургер меню для мобильной версии */
 
-.hamburger-icon {
-    /* font-size: 24px;
-    color: var(--bg-light); для иконки */
-    width: 24px; /* для картинки */
-    cursor: pointer;
+.hamburger-menu {
+    display: none;
 }
 
-.hamburger-menu {
-    display: flex;
-    justify-content: end;
+@media (max-width: 600px) {
+    .hamburger-menu {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+        justify-content: end;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .hamburger-menu {
-        display: none;
+        display: flex;
+        justify-content: end;
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1280px) {
-    .hamburger-menu {
+.hamburger-icon {
+    /* для иконки */
+    font-size: 22px;
+    color: var(--bg-light); 
+
+    /* для картинки */
+    /* width: 24px; */
+    cursor: pointer;
+}
+
+@media (min-width: 1280x) {
+    .hamburger-icon {
         display: none;
     }
 }
@@ -311,24 +376,39 @@ h2 {
     position: relative;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
     .hero-container {
-        padding-top: 50px;
+        padding-top: 34px;
         padding-bottom: 50px;
-        position: relative;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .hero-container {
+        padding-top: 45px;
+        padding-bottom: 50px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    .hero-container {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    .hero-container {
+        padding-top: 90px;
+        padding-bottom: 70px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-
+    .hero-container {
+        padding-top: 90px;
+        padding-bottom: 70px;
+    }
 }
 
 .section-image {
@@ -359,45 +439,23 @@ h2 {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    .hero-content {
+        height: 600px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
+    .hero-content {
+        height: 700px;
+    }
 }
 
 .title-hero {
     text-align: center;
     position: absolute;
     top: 0px;
-    left: 280px;
-    right: 280px;
-}
-
-@media (max-width: 600px) {
-    .title-hero {
-        text-align: center;
-        position: absolute;
-        top: 6px;
-        left: 10px;
-        right: 10px;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
+    left: 0px;
+    right: 0px;
 }
 
 .description-hero {
@@ -421,15 +479,9 @@ h2 {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
+    .description-hero {
+        width: calc(100% / 1.3);
+    }
 }
 
 .text-quote-hero {
@@ -459,15 +511,21 @@ h2 {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    .text-quote {
+        font-size: 34px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    .text-quote {
+        font-size: 38px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-
+    .text-quote {
+        font-size: 42px;
+    }
 }
 
 /* .btn-hero {
@@ -489,9 +547,26 @@ h2 {
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .date-size {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .date-size {
+        display: none;
+    }
+}
+
 .content-size {
-    /* max-width: 70%; */
     width: 792px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-size {
+        width: 100%;
+    }
 }
 
 .title-date {
@@ -512,6 +587,18 @@ h2 {
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .title-date {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .title-date {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
     .title-mobile-ver {
         font-family: 'Le Murmure', sans-serif;
@@ -522,6 +609,36 @@ h2 {
         letter-spacing: 0.05em;
 
         font-size: 50px;
+        line-height: 120%;
+        padding-bottom: 21px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .title-mobile-ver {
+        font-family: 'Le Murmure', sans-serif;
+        color:var(--text);
+        font-weight: 600;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+
+        font-size: 70px;
+        line-height: 120%;
+        padding-bottom: 21px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .title-mobile-ver {
+        font-family: 'Le Murmure', sans-serif;
+        color:var(--text);
+        font-weight: 600;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+
+        font-size: 90px;
         line-height: 120%;
         padding-bottom: 21px;
     }
@@ -611,6 +728,26 @@ h2 {
     
 }
 
+@media (max-width: 600px) {
+    .image-description-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }  
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .image-historical {
+        width: 100%
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image-historical {
+        width: 100%
+    }
+}
+
+
 .description-image {
     font-family: 'Oswald', 'Noto Sans', sans-serif;
     text-align: right;
@@ -621,6 +758,18 @@ h2 {
 
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .description-image {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .description-image {
+        font-size: 14px;
+    }
 }
 
 .text-widht-three {
@@ -636,15 +785,9 @@ h2 {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
+    .image-description-Caillebotte_1882 {
+        display: none;
+    }
 }
 
 .date-title {
@@ -664,6 +807,11 @@ h2 {
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .container-indent {
+        padding-bottom: 70px;
+    }
+}
 
 .title-fact {
     text-align: center;
@@ -673,6 +821,12 @@ h2 {
 @media (max-width: 600px) {
     .title-fact {
         padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .title-fact {
+        padding-bottom: 30px;
     }
 }
 
@@ -697,7 +851,6 @@ h2 {
 @media (max-width: 600px) {
     .fact-item {
         flex-direction: column;
-        /* text-align: center; */       /* подумать, стоит ли центровать */
     }
 }
 
@@ -720,6 +873,12 @@ h2 {
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .fact-subtitle {
+        font-size: 50px;
+    }
+}
+
 .fact-description {
     font-weight: 600;
     font-size: 18px;
@@ -732,6 +891,12 @@ h2 {
     .fact-description {
         font-size: 16px;
         padding-bottom: 16px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .fact-description {
+        font-size: 16px;
     }
 }
 
@@ -755,20 +920,38 @@ h2 {
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .title-galery {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
 
 .image-list {
     display: flex;
     gap: var(--indent-colomns);
     padding-bottom: 64px;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {
     .image-list {
-        display: flex;
         flex-direction: column;
-        padding-bottom: 35px;
-        overflow: hidden;
+        padding-bottom: 30px;
         gap: 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .image-list {
+        padding-bottom: 35px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image-list {
+        padding-bottom: 50px;
+        overflow: hidden;
     }
 }
 
@@ -788,28 +971,25 @@ h2 {
     padding-bottom: var(--image-indent);
 }
 
+.image-indent:last-child {
+    padding-bottom: 0px;
+}
+
 @media (max-width: 600px) {
     .image-indent {
         padding-bottom: var(--image-indent);
     }
-}
 
-
-.image-gallery {
-    object-fit: cover;
-    object-position: center;
-}
-
-@media (max-width: 600px) {
-    .image-gallery {
-        width: 100%;
+    .image-indent:last-child {
+        padding-bottom: var(--image-indent);
     }
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
-
+.image-gallery {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
-
 
 /* Footer */
 
@@ -828,4 +1008,17 @@ h2 {
     color: var(--text-menu);
     text-align: center;
     padding: 32px 0;
+}
+
+@media (max-width: 600px) {
+    .footer-text {
+        font-size: 16px;
+        padding: 30px 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .footer-text {
+        font-size: 16px;
+    }
 }
