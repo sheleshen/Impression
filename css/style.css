@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -572,10 +573,10 @@ h2 {
     }
 }
 
-/* .btn-hero {
-    margin: 0 auto;
-    display: block;
-} */
+.btn-hero {
+    /* margin: 0 auto;
+    display: block; */
+}
 
 
 /* Большой блок с датами */
